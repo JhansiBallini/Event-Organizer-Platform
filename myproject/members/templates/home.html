@@ -1,0 +1,192 @@
+{% block content %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Event</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{% static 'css/homeevent.css' %}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Kaushan+Script&display=swap" rel="stylesheet">
+<style>
+  h2{
+    font-family: Courgette;
+    font-weight: bold;
+  }
+</style>
+</head>
+<body style="font-family: Courgette;">
+
+<!-- Navbar (sit on top) -->
+<div style="height:100px" class="w3-top">
+  <div style="font-family: Courgette;" class="w3-bar w3-blue w3-wide  w3-card">
+    <a href="#" class="w3-bar-item w3-button"><h2>event plans</h2></a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div style="font-family: Courgette;" class="w3-right w3-hide-small">
+	  <a href="#home" class="w3-bar-item w3-button"><h2>Home</h2></a>
+      <a href="#projects" class="w3-bar-item w3-button"><h2>Services</h2></a>
+      <a href="#about" class="w3-bar-item w3-button"><h2>About</h2></a>
+      <a href="#contact" class="w3-bar-item w3-button"><h2>Contact</h2></a>
+    </div>
+  </div>
+</div><br><br>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1500px;" id="home">
+  <img src="{% static 'images/event1.jpg' %}" alt="Architecture" width="1500" height="700">
+  <div class="w3-display-middle w3-margin-top w3-center"><br><br><br><br><br>
+    <h1><b>Welcome!</b></span> <span class="w3-hide-small w3-text-light-grey"></span></h1>
+    <a href="{% url 'login' %}"  class="btn" style="border-radius:30px;color: rgb(19, 9, 9); padding: 10px 20px;"><h2>Let's start</h2></a>
+  </div>
+</header>
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="projects">
+    <h2 style="text-align: center;" class="w3-border-bottom w3-gray w3-border-light-grey w3-padding-16">SERVICES</h2>
+  </div>
+  <p style="color: black;font-size: 20px; text-align: center;">services that an event organizer can provide to customers through our website</p>
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href="https://www.w3schools.com">Wedding Events</a></div>
+        <figure class="image">
+        <img src="https://www.weddingstylemagazine.com/wp-content/uploads/2021/09/black-wedding-decor-my-event-design.jpg" width="30  0px" height="250px">
+        A celebratory event following a wedding ceremony, often featuring dinner, dancing, and speeches from the bride and groom
+		</figure>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href="https://www.w3schools.com">Corporate Events</a></div>
+        <figure class="image">
+        <img src="http://www.jesvenues.com/blog/wp-content/uploads/2017/05/corporate-event1.jpg"alt="background" width="300px" height="250px">
+  A business-focused event designed for companies to gather and exchange ideas, featuring keynote speakers and workshops
+		</figure>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href="https://www.w3schools.com">Music Festival</a></div>
+        <figure class="image">
+        <img src="https://images.pexels.com/photos/1190297/pexels-photo-1190297.jpeg?auto=compress&cs=tinysrgb&w=600" alt="background" width="300px" height="250px">
+         A multi-day event featuring live music performances from a variety of artists and genres, often held outdoors in a festival-style setting.
+		</figure>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href="https://www.w3schools.com">Drop Off Catering</a></div>
+        <figure class="image">
+        <img src="https://www.captainjoe.in/blog/images/drop-off-catering.jpg"alt="background" width="300px" height="250px">
+        It is a type of catering service where the food is prepared off-site and delivered to the event venue, usually in disposable containers or platters.
+		</figure>
+      </div>
+    </div>
+  </div>
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href="https://www.w3schools.com">Charity Gala</a></div>
+        <figure class="image">
+        <img src="https://www.wth.org/wp-content/uploads/2019/05/Charity-Gala.jpg" alt="background" width="300px" height="250px">
+        A formal event aimed at raising money for a charitable cause, typically featuring a silent auction, dinner, and entertainment.
+		</figure>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href="https://www.w3schools.com">Art Exhibition</a></div>
+        <figure class="image">
+        <img src="http://the-creative-business.com/wp-content/uploads/2014/06/512px-Robert_Mapplethorpe_Exhibition.jpg"alt="background" width="300px" height="250px">
+        An event showcasing the works of artists, often with a theme or focus, featuring art displays and artist talks.
+
+       
+		</figure>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href="https://www.w3schools.com">Birthday Parties</a></div>
+        <figure class="image">
+        <img src="https://images.unsplash.com/photo-1601268588577-319223ba7cb3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8YmlydGhkYXklMjBwYXJ0eXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"alt="background" width="300px" height="250px">
+        Birthday party event planning involves organizing and coordinating all aspects of a birthday celebration, including the venue, guest list, decorations, entertainment, food, and activities.
+		</figure>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href="https://www.w3schools.com">Product Launch</a></div>
+        <figure class="image">
+        <img src="https://www.incimages.com/uploaded_files/image/1920x1080/getty_539935348_2000133320009280153_423557.jpg"alt="background" width="300px" height="250px">
+        An event aimed at introducing a new product or service to the market, often featuring product demonstrations and media coverage.
+
+        
+		</figure>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    
+    <h2 style="text-align:center;" class="w3-border-bottom w3-gray w3-border-light-grey w3-padding-16">About</h2>
+    <center><img src="https://media.istockphoto.com/id/1350787994/photo/light-bulbs-with-event-management-concept.jpg?b=1&s=170667a&w=0&k=20&c=GvH8NqOq5dU3AIPCsKIoXLkD8SijfcJiB0VhnS5RUV8="></center>
+    <p>Welcome to our event management website, where we strive to bring together event organizers and users in a seamless and hassle-free manner. Our platform is designed to make event planning and management a breeze for both organizers and users.
+For organizers, we offer a comprehensive platform to showcase their skills, experience, and services to potential clients. Organizers can create their profiles, upload their portfolio, and highlight their areas of expertise. Our platform also allows organizers to manage their bookings, track their payments, and communicate with their clients, all in one place.
+      For users, we offer a user-friendly interface to browse through the profiles of different organizers, filter them based on their preferences, and make a booking. Our platform also offers a secure payment gateway, real-time booking confirmation, and a messaging system to communicate with the organizer.
+      At our event management website, we believe in providing a transparent and seamless experience to both organizers and users. We are committed to ensuring that our platform is user-friendly, secure, and efficient. Whether you're an organizer looking to expand your reach or a user looking for the perfect event organizer, we've got you covered.
+    </p>
+  </div>
+
+  <div class="w3-container w3-padding-32" id="Contact"></div>
+  <h2 style="text-align:center;" class="w3-border-bottom w3-gray w3-border-light-grey w3-padding-16">Contact</h2>
+  <div class="w3-row-padding w3-grayscale" id="Contact">
+   
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzvsGN4tI842XHa3v2O1cUFuQTI5RQ4sn9eWrKppo9onMaic5GyWD51nVbU2p9QhJmzDM&usqp=CAU"  width="150px" height:"1000px" >
+      <h3>Deva Raju</h3>
+      <p class="w3-opacity"></p>
+      <p>E-mail : omedeva2004@gmail.com</p>
+      <p>Contact : +91 9381106623</p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvHpao1OgEXxcTdQJneXCgH2YKJmw_M-6FZD_XyHlGHrxd1ckAO0BLUpSdu77SBDU5P0E&usqp=CAU"  width="150px" height:"1500px">
+      <h3>Jhansi</h3>
+      <p>E-mail : jhansiballini65@gmail.com</p>
+      <p>Contact : +91 7993347316</p>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvHpao1OgEXxcTdQJneXCgH2YKJmw_M-6FZD_XyHlGHrxd1ckAO0BLUpSdu77SBDU5P0E&usqp=CAU"  width="150px" height:"1500px">
+      <h3>Lahari</h3>
+      <p>E-mail : niddanalahari@gmail.com</p>
+      <p>Contact : +91 6300558941</p>
+    </div>
+  </div>
+</div>
+
+  
+  
+<!-- Image of location/map -->
+<div class="w3-container">
+  <div class="container">
+  <img src="footer.jpg" alt="image" width="1700px" height="300px">
+  <div class="centered"><p style="font-size:5px;">To create something exceptional, your mindset must be relentlessly focused on on the Smallest detail</p></div>
+</div>
+</div>
+
+<!-- End page content -->
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+<a href="C:\Users\vinay\Desktop\MINIPROJECT\footer.jpg" >Mvgr</a>
+</footer>
+
+</body>
+</html>
+{% endblock content %}

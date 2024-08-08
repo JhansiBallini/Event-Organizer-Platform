@@ -1,0 +1,116 @@
+{% include 'dashboard2.html' %}
+    {% block content %}
+    {% load static %}
+ 
+ <html>
+    <head>
+        <title>table</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Kaushan+Script&display=swap" rel="stylesheet">
+        <style>
+            table {
+  border-collapse: collapse;
+  width: 70%;
+  height:50%;
+  font-family: Courgette;
+  font-size: 14px;
+  margin-left:500px;
+  margin:auto;
+  border-radius: 50px;
+}
+
+th {
+  background-color: #26595c;
+  color: #eedfdf;
+  font-weight: bold;
+  padding: 8px;
+  text-align: left;
+  border: 1px solid black;
+}
+
+td {
+  border: 1px solid rgb(14, 13, 13);
+  border-collapse: collapse;
+  padding: 8px;
+  color:black;
+  font-weight: bold;
+  font-size: 30px;
+}
+body{
+    text-align: center;
+    left:200px;
+    margin-left: 5rem;
+    font-family: Courgette;;
+}
+.field{
+    color:black;
+    font-weight: bold;
+    font-family: Courgette;
+    font-size:23px;
+
+}
+input{
+       top:30%;
+       height:40px;
+       width:250px;
+       font-size:15px;
+       border:2px solid black;
+       color:black;
+       padding: 0 0 0 40px;
+}
+button{
+    width:70px;
+    height:20px;
+}
+
+
+
+        </style>
+
+    </head>
+    <body><br><br>
+        <h3 style="color:rgb(65, 7, 7)">choose the organizer based on location and event type</h3><br>
+        <form method="post">
+            {% csrf_token %}
+        location:<input type="text" name="eloc" placeholder="Location">
+        Event Type:<input type="text" name="etype" placeholder="i.e wedding,corporate,others"><br><br>
+        <button type="submit">OK</button><br><br>
+        </form>
+        <table>
+            <thead>
+                <tr><th>Name</th>
+                    <th>Event Name</th>
+                    <th>Event Type</th>
+                    <th>Event Location</th>
+                    <th>Contact</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for organizer in organizers %}
+                <tr>
+                    <td>{{organizer.name1}}</td>
+                    <td>{{organizer.ename}}</td>
+                    <td>{{organizer.etype}}</td>
+                    <td>{{organizer.eloc}}</td>
+                    <td>{{organizer.mobile1}}</td>
+                    <td>
+                        <form method="post" action="{% url "event_details" %}">
+                            {% csrf_token %}
+                            <input type="text" hidden value="{{organizer.email1}}" name="email">
+                            <button type="submit" value="get details">Details</button>
+                        </form>
+                    </td>
+
+                    
+                  
+                </tr>
+                {% endfor %}
+            </tbody>
+
+        </table><br><br>
+
+    </body>
+</html>
+{% endblock content %}

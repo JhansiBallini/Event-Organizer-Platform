@@ -1,0 +1,71 @@
+{% include 'base.html' %}
+    {% block content %}
+    {% load static %}
+<html>
+<head>
+<title>REGISTRATION FORM</title>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Kaushan+Script&display=swap" rel="stylesheet">
+<style>
+    *{
+    font-family: 'poppins',sans-serif;
+}
+body {
+      background-image: url('https://eventacademy.com/wp-content/uploads/2012/05/sweet-ice-cream-photography-93638-unsplash.jpg');
+}
+form{
+    margin-top: 20px;;
+}
+i{
+            position:relative;
+            top:-1px;
+            left:-280px;
+
+        }
+input{
+       top:30%;
+       height:40px;
+       width:300px;
+       font-size:15px;
+       border-radius:30px;
+       border:2px solid black;
+       color:black;
+       padding: 0 0 0 40px;
+}
+button{
+      height:30px;
+      width:110px;
+      font-size:15px;
+      color:black;
+      border:2px solid black;
+      padding: 0 0 0 5px;
+      text-align:space between;
+}
+</style>
+<script src="https://kit.fontawesome.com/5dd5b93809.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<h2 style="text-align:center;font-family:Courgette">ORGANIZER</h2>
+<form method="post" action="/signup1">
+    {% csrf_token %}
+    <p>{{message}}</p>
+<center>
+<input type="text" id="fn" placeholder="First Name" name= "fname" required><i class="fa-solid fa-user"></i><br><br>
+<input type="text" id="ln" placeholder="Last Name" name="lname" required><i class="fa-solid fa-user"></i><br><br>
+<input type="text" id="eml" placeholder="e-mail" name="eml"required><i class="fa-solid fa-envelope"></i><br><br>
+<input type="text" id="phnno" placeholder="Phone Number" name="phnno" required><i class="fa-solid fa-phone"></i><br><br>
+<input type="password" id="pswd" placeholder="Password" name="pswd" required><i class="fa-solid fa-lock"></i><br><br>
+<input type="password" id="cpswd" placeholder="Confirm Password"name="cpswd" required><i class="fa-solid fa-check"></i><br><br>
+<div id="foo">
+<button type="submit" value="Register">Submit</button>
+<button type="Reset" value="Cancel">Cancel</button>
+</div>
+
+<center>
+</form>
+
+</body>
+</html>
+{% endblock content %}

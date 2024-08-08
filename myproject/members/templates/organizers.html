@@ -1,0 +1,72 @@
+
+{% include 'dashboard1.html' %}
+
+    {% block content %}
+    {% load static %}
+
+    <head>
+        <title>organizer details</title>
+        <link rel="stylesheet" href="{% static 'css/pg1.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Kaushan+Script&display=swap" rel="stylesheet">
+    </head>
+    <body >
+        <img src="https://www.eventbrite.co.uk/blog/wp-content/uploads/2022/06/shutterstock_245657518.jpg" width="500px" height="300px">
+        
+        
+        <form  method="post">
+            {% csrf_token %}
+            <h3></h3>
+            <div class="field">
+                <label>Name:</label><input type="text" class="input" placeholder="" name="name1" id="name1"  required>
+            </div><br>
+            <div class="field">
+                <label>Email</label><input type="text" class="input" placeholder="" name="email1" id="email1" required>
+            </div><br>
+            <div class="field">
+                <label>Phone:</label> <input type="text" class="input" placeholder="mobile number" name="phone1" id="phone1" required>
+            </div><br>
+            <h3>EVENT INFORMATION</h3>
+            <div class="field">
+                <label>Event Name:</label><input type="text" class="input" placeholder="" name="event_n" id="event_n"  required>
+            </div><br>
+            <div class="field">
+                <label>Event Type:</label><input type="text" class="input" placeholder="" name="event_t" id="event_t"  required>
+                
+            </div><br>
+            <div class="field">
+                 <label>Event location:</label><input type="text" class="input" placeholder="" name="event_l" id="event_l"  required>
+            </div><br>
+            <div class="field">
+                 <label>Event Theme:</label><input type="text" class="input" placeholder="" name="theme" id="theme"  required>
+            </div><br> 
+            <input type="file" name="img"  id="img" placeholder="image">
+            <div class="field">
+                <label>Special Requirements:</label><input type="text" class="input" placeholder="" name="req" id="req"  required>
+            </div><br>
+            <H3>BUDGET</H3>
+            <div class="field">
+                <label>Total Budget:</label><input type="text" class="input" placeholder="" name="budget" id="budget"  required>
+            </div><br>
+            <div class="field">
+                <label>Breakdown of Budget:</label><input type="text" class="input" placeholder="" name="break" id="break" >
+            </div><br>
+            <h3>SERVICES PROVIDED</h3>
+            <div class="field">
+                <label>Services:</label><input type="text" class="input" placeholder="" name="service" id="service"  required>
+                
+            </div><br>
+            <H3>EXPERIENCE AND REFERENCES</H3>
+            <div class="field">
+                <label>Experience:</label><input type="text" class="input" placeholder="" name="exp" id="exp" >
+            </div><br>
+            <div class="field">
+                <label>Reference:</label><input type="text" class="input" placeholder="" name="ref" id="ref" >
+            </div><br>
+                <input STYLE="text-align:center" type="submit" value="submit"></input>
+            </div>
+        </form>
+    </body>
+
+{% endblock content %}

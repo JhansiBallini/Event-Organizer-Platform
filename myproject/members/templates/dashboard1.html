@@ -1,0 +1,66 @@
+{% include 'base.html' %} 
+<html>
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+    <script src="https://kit.fontawesome.com/5dd5b93809.js" crossorigin="anonymous"></script>
+<style>
+body{
+    
+    background-image: url(https://images.unsplash.com/photo-1550710901-bb7411e532b3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.dashboard {
+  position: fixed;
+    left: 0;
+    margin-top: 0%;
+    height: 100%;
+    width: 200px;
+    background-color: #0a1a42;
+    color: #151212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  
+  .dashboard a {
+    margin: 10px 0;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    color: #efe4e4;
+    font-size: 18px;
+  }
+  
+  .dashboard a:hover {
+    background-color: #555555;
+  }
+  i{
+    position:relative;
+            top:35px;
+            left:-72px;
+            gap:None;
+            color:#efe4e4
+  }
+ 
+</style>
+</head>
+<body>
+
+<div class="dashboard" >
+  
+    <i class="fa-solid fa-list-check"></i><a href="{% url 'organizers' %}">Manage Venue</a>
+    <i class="fa-solid fa-list-check"></i><a href="{% url 'person_detail' %}">view details</a>
+    <i class="fa-solid fa-user"></i><a href="{% url 'bookings' %}">Bookings</a>
+    <i class="fa-solid fa-user"></i><a href="{% url 'o_profile' %}">profile</a>
+    <i class="fa-solid fa-right-from-bracket"></i><a href="{% url 'home' %}">logout</a>
+</div>
+
+<p></p>
+</body>
+
+</html>

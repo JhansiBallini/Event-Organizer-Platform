@@ -1,0 +1,66 @@
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+<style>
+/* Custom styles for the Travelbuddy nav bar */
+.navbar {
+  background-color: #1880e7;
+  box-shadow: none;
+ 
+  width:100%;
+}
+
+.navbar-brand {
+  color: #000;
+  font-size: 28px;
+  font-weight: bold;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+.nav-link {
+  color: #d6d9dc;
+  font-size: 18px;
+  font-weight: 500;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 18px 18px;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  transition: color 0.2s ease-out;
+}
+
+.nav-link:hover{
+  color: #10110f;
+}
+.nav-link.active {
+  color: #cfd4ca;
+}
+.nav-link.active:hover {
+  color: #141513;
+}
+
+/* Custom styles for login and signup buttons */
+
+
+
+</style>
+
+
+
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">EVENT</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>&nbsp;&nbsp;&nbsp;
+          <a class="nav-link" href="{% url 'login' %}">Login</a>
+          <a class="nav-link" href="{% url 'register' %}">signup</a>
+          <a class="nav-link" href="{% url 'about' %}">About</a>
+          <a class="nav-link" href="{% url 'contact' %}">Contact us</a>
+          
+        </div>
+      </div>
+    </div>
+  </nav>

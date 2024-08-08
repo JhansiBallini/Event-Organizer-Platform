@@ -1,0 +1,26 @@
+{% include 'dashboard2.html' %}
+    {% block content %}
+    {% load static %}
+    <style>
+      lable{
+         position: relative;
+      }
+    </style>
+    <center>
+       <form method="POST">
+        {% csrf_token %}
+          <p>Name:{{user1.uname}}</p>
+          <p>Email:{{user1.email}}</p>
+          <p>Mobile:{{user1.mobile}}</p>
+          <label>Date:</label><input type="date" name="date"><br>
+          <label>Time:</label><input type="time" name="time"><br>
+          <label>Venue:</label><input type="text" name="venue"><br>
+          <label>Guest Count:</label><input type="text" name="gcount"><br>
+          <label>Additional Requirements:</label><input type="text" name="addreq" value=""><br>
+          <input type="submit" value="submit"><br><br>
+       </form>
+    </center>
+
+    
+
+{% endblock %}

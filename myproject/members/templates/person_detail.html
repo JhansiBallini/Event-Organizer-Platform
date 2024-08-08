@@ -1,0 +1,49 @@
+{% include 'dashboard1.html' %}
+
+{% block content %}
+{% load static %}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Kaushan+Script&display=swap" rel="stylesheet">
+<style>
+    
+    .card{
+         width: 500px;
+         height:80%;
+         
+         color:aliceblue;
+         margin:auto;
+         margin-top: 50px;
+         margin-bottom: 50px;
+         font-family: Courgette;
+    }
+    
+</style>
+<body style="text-align: center;">
+<form method="POST" action="/person_detail">
+    {% csrf_token %}
+
+<div style="color:black;" class="card">
+    {{msg}}
+    <h1>welcome </h1>   
+    <center>
+    <label>Name:</label><input type="text" name="name" value="{{ organizers.name1 }}"><br>
+    <label>Email:</label><input type="text" name="email" value="{{ organizers.email1 }}"><br>
+    <label>Mobile NO:</label><input type="text" name="mob" value="{{ organizers.mobile1 }}"><br>
+    <label>Event Name:<input type="text" name="ename" value="{{ organizers.ename}}"></label>
+    <label>Event Type:<input type="text" name="etype" value="{{ organizers.etype }}"></label>
+    <label>Event Location:<input type="text" name="eloc" value="{{ organizers.eloc }}"></label>
+    <label>Event Theme:<input type="text" name="etheme" value="{{ organizers.etheme }}"></label>
+    <label>Event Requirements:<input type="text"name="ereq"  value="{{ organizers.ereq }}"></label>
+    <label>Budget:<input type="text" name="budget" value="{{ organizers.ebudget }}"></label>
+    <label>Breakdown Budget:<input type="text" name="break" value="{{ organizers.ebreak }}"></label>
+    <label>Event Services:<input type="text" name="eservice" value="{{ organizers.eservice }}"></label>
+    <label>Experience:<input type="text" name="exp" value="{{ organizers.experience }}"></label>
+    <label>References:<input type="text" name="ref" value="{{ organizers.ref }}"></label><br>
+    <input type="number" value="{{organizers.id}}" name="id" hidden>
+    <button type="submit">save changes</button>
+    </center>
+</div>
+</form>
+</body>
+{% endblock %}

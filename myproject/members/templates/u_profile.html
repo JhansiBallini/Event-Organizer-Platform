@@ -1,0 +1,49 @@
+{% include 'dashboard2.html' %}
+
+{% block content %}
+{% load static %}
+<script src="https://kit.fontawesome.com/5dd5b93809.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Kaushan+Script&display=swap" rel="stylesheet">
+<style>
+    form{
+        background-color:none;
+        margin-top:100px;
+
+    }
+    .c img{
+        width:30%;
+        height:50%;
+        align-items: center;
+        float:left;
+        margin-top:50px;
+    
+    }
+    .c{
+        width:50%;
+        height: 80%;
+        margin-left:50px;
+        background-color: aliceblue;
+        background-size: 400px;
+    }
+    button{
+        width: 90px;
+        height:30px;
+        background-color:rgb(16, 16, 49);
+        color:blanchedalmond
+    }
+</style>
+<center style="color:black">
+    <form method="POST">
+        {% csrf_token %}
+        <div class="c">
+        <img src="https://www.kindpng.com/picc/m/269-2697881_computer-icons-user-clip-art-transparent-png-icon.png"><br><br>
+<p>Name:<input type="text" value="{{ user.uname }}"></p>
+    <p>Email:<input type="text" value="{{ user.email }}"></p>
+    <p>Mobile NO:<input type="text" value="{{ user.mobile }}"></p>
+    <button type="submit" value="Edit">Edit</button><br><br>
+    </div>
+    </form>
+</center>
+{% endblock content %}
