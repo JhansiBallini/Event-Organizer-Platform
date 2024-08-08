@@ -1,0 +1,100 @@
+*{
+    font-family: 'poppins',sans-serif;
+}
+body{
+    background-image: url("event2.jpg");
+    background-repeat: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.box{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+   top:30%;
+   min-height: 30vh;
+    
+}
+i{
+   top:100px;
+   left:20px;
+}
+.top{
+    font-size: 30px;
+    display:flex;
+    justify-content:center;
+    padding:20px 55px 15px 0;
+}
+.container{
+     width:350px;
+    display:flex;
+    flex-direction:column;
+    padding:0 15px 0 15px ;
+}
+.input-field{
+    display:flex;
+    flex-direction:column;
+     padding:0 25px 0 0;
+}
+.input-fld{
+    padding:-50px 30px 0 30px;
+}
+.input{
+    height:40px;
+    width:100%;
+    font-size:15px;
+    border:none;
+    outline:none;
+    border-radius:30px;
+    color:black;
+    padding:0 0 0 45px;
+    background:rgba(255,255,255,0.4);
+}
+.submit{
+    height:35px;
+    width:90%;
+    font-size:15px;
+    border-radius:30px;
+    outline:none; 
+    border-color:green;
+    background:rgba(255,255,255,0.7);
+    cursor:pointer;
+    transition: .3s;
+}
+.bottom{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+::-webkit-input-placeholder{
+    color:black;
+}
+.submit:hover{
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+.bottom{
+   display:flex;
+   flex-direction:row;
+   justify-content:center;
+   font-size:15px;
+   color:black;
+   margin-top:10px;
+}
+form{
+    height:35px;
+    width:90%;
+    font-size:15px;
+    border-radius:30px;
+    outline:none; 
+}
+
+.left{
+   padding: 0 90px 0 0;
+}
+.right{
+   padding: 0 20px 0 0;
+}
+   
+
+     
